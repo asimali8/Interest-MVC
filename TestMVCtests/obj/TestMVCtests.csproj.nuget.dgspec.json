@@ -1,0 +1,143 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/asimali/Projects/Testmvc/TestMVCtests/TestMVCtests.csproj": {}
+  },
+  "projects": {
+    "/Users/asimali/Projects/Testmvc/Testmvc/Testmvc.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/asimali/Projects/Testmvc/Testmvc/Testmvc.csproj",
+        "projectName": "Testmvc",
+        "projectPath": "/Users/asimali/Projects/Testmvc/Testmvc/Testmvc.csproj",
+        "packagesPath": "/Users/asimali/.nuget/packages/",
+        "outputPath": "/Users/asimali/Projects/Testmvc/Testmvc/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/asimali/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/asimali/Projects/Testmvc/TestMVCtests/TestMVCtests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/asimali/Projects/Testmvc/TestMVCtests/TestMVCtests.csproj",
+        "projectName": "TestMVCtests",
+        "projectPath": "/Users/asimali/Projects/Testmvc/TestMVCtests/TestMVCtests.csproj",
+        "packagesPath": "/Users/asimali/.nuget/packages/",
+        "outputPath": "/Users/asimali/Projects/Testmvc/TestMVCtests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/asimali/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/asimali/Projects/Testmvc/Testmvc/Testmvc.csproj": {
+                "projectPath": "/Users/asimali/Projects/Testmvc/Testmvc/Testmvc.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

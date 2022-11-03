@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Compound Interest Calculator";
+}
+
+<add key="connectionString" value="mongodb://localhost" />
+
+
+<body style="background-color:lightsteelblue">
+
+</body>
+
+<div class="text-center">
+    <h1 class="display-3">Discover your Future Earning Potential</h1>
+    <br><br>
+</div>
+
+<form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Compound_Interest_Calculator">
+    <div class="text-center">
+        <b>Enter Ticker Symbol:</b> <text> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</text> <b>Enter Principal: </b> <text> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</text> <b>APY:</b> <text> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</text> <b>Years Invested:</b>
+        <br>
+    </div>
+    <div class="text-center">
+        <text>&nbsp; &nbsp; &nbsp; &nbsp;</text>@Html.TextBox("ticker", "", new { size = "10" }) <text> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</text> @Html.TextBox("principal", "", new { size = "10" }) <text> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</text> @Html.TextBox("apy", "", new { size = "10" }) <text> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</text> @Html.TextBox("years", "", new { size = "10" })
+    </div>
+    <div class="text-center">
+        <br>
+        <input type="submit" name="answer" value="Save" class="btn btn-dark" />
+        <br><br>
+    </div>
+</form>
+
+
+<div class="text-center">
+    <form method="get" enctype="multipart/form-data" asp-controller="Home" asp-action="GetFromJson">
+        <div class="text-center">
+            <input type="submit" name="answer" value="Load" class="btn btn-dark" />
+        </div>
+
+        <br>
+        @if (ViewBag.results?.Count > 0)
+        {
+            <style>
+                table, th, td {
+                    border: 3px solid black;
+                }
+
+                    table.center {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+            </style>
+
+            <h4>JSON Data Table</h4>
+
+            <table class="center" style="width:50%">
+                <tr>
+                    <th>Ticker Symbol</th>
+                    <th>Principal</th>
+                    <th>APY</th>
+                    <th>Years</th>
+                    <th>Total</th>
+                </tr>
+
+                @foreach (var a in ViewBag.results)
+                {
+                    <tr>
+                        <td>@a.ticker</td>
+                        <td>$@a.principal</td>
+                        <td>@a.apy%</td>
+                        <td>@a.years</td>
+                        <td>$@a.result</td>
+
+                    </tr>
+                }
+            </table>
+        }
+    </form>
+
+    @*<form enctype="multipart/form-data" method="post">
+        <a download href="@Url.Page("Index", "Export", new { fileName = @"/Users/asimali/Projects/Testmvc/Testmvc/Data/testing.json"})"> Export </a>
+    </form>*@
+  
+</div>
+
+<div class="text-center">
+    <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="deleteJson">
+        <br><br>
+        <b>Enter Ticker to Delete: </b> @Html.TextBox("ticker", "", new { size = "8" }) <text> &nbsp; </text>
+        <input type="submit" name="answer" value="Delete" class="btn btn-dark" />
+    </form>
+</div>
